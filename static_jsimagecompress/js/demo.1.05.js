@@ -93,7 +93,7 @@ function compressAll() {
                 var downloadButton = $('<input type="button" id="submit_multi" value="Download"/></br></br>');
                 downloadButton.click(function () {
                     var link = document.createElement('a');
-                    link.href = window.URL.createObjectURL(Compress.dataURLtoBlob(item.dataurl));
+                    link.href = window.URL.createObjectURL(Compress.dataUrlToBlob(item.dataurl));
 
                     var dotIndex = item.filename.lastIndexOf(".");
                     link.download = dotIndex===-1 ? item.filename+"-small.jpg": item.filename.substr(0, dotIndex)+"-small.jpg";
