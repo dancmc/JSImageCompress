@@ -3,10 +3,10 @@
 - Works by decreasing quality and/or image dimensions till desired maximum parameters met.
 - Demo at https://dancmc.io/projects/JSImageCompress
 ## Install
-Make a local copy of jsimagecompress.1.02.js / jsimagecompress.1.02-min.js or link to https://dancmc.io/static_jsimagecompress/js/jsimagecompress.1.02-min.js 
+Make a local copy of jsimagecompress.1.05.js / jsimagecompress.1.03-min.js or link to https://dancmc.io/static_jsimagecompress/js/jsimagecompress.1.03-min.js 
 
 ## Quick Start
-Call either imagesToResizedDataUrls or imagesToResizedBlobs
+Instantiate ImageCompressor and call either imagesToResizedDataUrls or imagesToResizedBlobs
 * 1st argument : blob array
 * 2nd argument : specify any number of options
     * should at least specify maxSize or maxWidth/Height
@@ -16,7 +16,9 @@ Simplest way :
 ```javascript
 var imageFiles = Array.from(document.getElementById('images').files);
 
-imagesToResizedBlobs(imageFiles, {
+var Compress = new ImageCompressor();
+
+Compress.imagesToResizedBlobs(imageFiles, {
     "maxSize" : 0.1  // size in MB
 }, function (resultArray) {
      
@@ -32,10 +34,11 @@ Full option list :
 ```javascript
 // retrieve file list from HTML file input
 var imageFiles = Array.from(document.getElementById('images').files);
+var Compress=  new ImageCompressor();
 
 // call function to resize images
 // 1st argument : blob array, 2nd : object with optional options,
-imagesToResizedBlobs(imageFiles, {
+Compress.imagesToResizedBlobs(imageFiles, {
     "maxWidth" : 1920,  // max width of output, default 99999
     "maxHeight" : 1920, // max height of output, default 99999
     "maxSize" : 0.1,  // max size of output in MB, default 999
@@ -77,4 +80,4 @@ Result object formatted as follows :
 ## Notes
 * Utility method dataUrlToBlob included to convert dataUrls to blobs if needed
 * maxSize in options and original/finalSize in result refer to result blobs. Corresponding dataUrls are 4/3 times larger.
-* use the base64StringFromDataUrl method to convert data url to plain base64 string
+* Utility method base64StringFromDataUrl provided to convert data url to plain base64 string
