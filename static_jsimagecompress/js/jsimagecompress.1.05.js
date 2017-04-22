@@ -1,9 +1,11 @@
 
 function ImageCompressor() {
+    this.defaultFor = defaultFor;
     function defaultFor(arg, val) {
         return typeof arg !== 'undefined' ? arg : val;
     }
 
+    this.formatSize = formatSize;
     function formatSize (size, units, isdataurl) {
 
         var r = size;
@@ -21,8 +23,8 @@ function ImageCompressor() {
         }
     }
 
-
-    this.imagesToResizedDataUrls=function(fileArray, options, callback) {
+    this.imagesToResizedDataUrls = imagesToResizedDataUrls;
+    function imagesToResizedDataUrls(fileArray, options, callback) {
 
         var totalcount = fileArray.length;
         var resultArray = [];
@@ -134,9 +136,10 @@ function ImageCompressor() {
             };
             reader.readAsDataURL(file);
         });
-    };
+    }
 
-    this.imagesToResizedBlobs=function(fileArray, options, callback) {
+    this.imagesToResizedBlobs = imagesToResizedBlobs;
+    function imagesToResizedBlobs(fileArray, options, callback) {
         imagesToResizedDataUrls(fileArray, options, function (resultArray) {
             resultArray.forEach(function (result) {
                 result.blob = dataURLtoBlob(result.dataurl);
@@ -144,22 +147,26 @@ function ImageCompressor() {
             });
             callback(resultArray);
         })
-    };
+    }
 
-    this.dataURLtoBlob = function(dataurl) {
+    this.dataUrlToBlob = dataURLtoBlob;
+    function dataURLtoBlob(dataurl) {
         var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
             bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
         while (n--) {
             u8arr[n] = bstr.charCodeAt(n);
         }
         return new Blob([u8arr], {type: mime});
-    };
+    }
 
-    this.base64StringFromDataUrl = function(dataurl) {
+    this.base64StringFromDataUrl = base64StringFromDataUrl;
+    function base64StringFromDataUrl(dataurl) {
         try {
             return dataurl.split(",")[1];
         } catch (error) {
             return dataurl;
         }
     }
+
+
 }
