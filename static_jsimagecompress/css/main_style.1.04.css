@@ -16,12 +16,13 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 
 #result_div div {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    content: "";
-    clear: both;
-    display: table;
-    width: 100%;
+    /*margin-top: 20px;*/
+    /*margin-bottom: 20px;*/
+    /*content: "";*/
+    /*clear: both;*/
+    /*display: table;*/
+    /*width: 100%;*/
+    overflow: hidden;
 }
 
 #result_div div img {
@@ -33,26 +34,25 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 
 #result_div div p {
-    padding-bottom: 10px;
-    font-size: 1em;
+    /*padding-bottom: 10px;*/
+    font-size: 0.8em;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+/*.clearfix::after {*/
+    /*content: "";*/
+    /*clear: both;*/
+    /*display: table;*/
+/*}*/
 
 @media only screen and (max-resolution: 192dpi) and (min-width: 768px){
     #result_div div img {
         float: left;
-        width: 40%;
-        vertical-align: middle;
+        width: 50%;
         margin-right: 40px;
     }
 
     #result_div div p {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 }
 
