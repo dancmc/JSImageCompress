@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MFF Parser</title>
+    <link rel="stylesheet" type="text/css" href="../static_jsimagecompress/css/main_style.v2.css">
+</head>
+<body>
+
+<h1> JS Image Compress Demo</h1>
+<form id="image_submit" action="/mff/ocr" method="post" enctype="multipart/form-data" onsubmit="return false">
+    <p><input type="file" id="images" name="file" multiple/>
+
+</form>
+<span>
+    <input type="button" id="submit_multi" value="Submit Images"/>
+</span>
+
+<div class="clearfix" id="result_div">
+    <div style='clear:both'></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"
+        charset="utf-8"></script>
+
+<script src="../static_jsimagecompress/js/jsimagecompress.1.00-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../static_jsimagecompress/js/demo.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
