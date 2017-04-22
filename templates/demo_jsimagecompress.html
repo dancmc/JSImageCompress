@@ -4,18 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <title>MFF Parser</title>
-    <link rel="stylesheet" type="text/css" href="../static_jsimagecompress/css/main_style.v2.css">
+    <link rel="stylesheet" type="text/css" href="../static_jsimagecompress/css/main_style.v2.01.css">
 </head>
 <body>
 
 <h1> JS Image Compress Demo</h1>
-<form id="image_submit" action="/mff/ocr" method="post" enctype="multipart/form-data" onsubmit="return false">
-    <p><input type="file" id="images" name="file" multiple/>
 
-</form>
+<p><input type="file" id="images" name="file" multiple/></p>
 <span>
     <input type="button" id="submit_multi" value="Submit Images"/>
 </span>
+
+<br><br>
+
+<span> Max Width
+  <input name="Max Width" type="number" id="maxwidth" class="inputboxes" max="1000" value="2560"/>
+</span>
+
+<span> Max Height
+  <input type="number" id="maxheight" class="inputboxes" value="2560"/>
+</span>
+
+<span> Max Size (MB)
+  <input type="number" id="maxsize" value="0.15" class="inputboxes"/>
+</span>
+
+<br><br>
+
+<span> Min Quality (10-90)
+  <input type="number" id="minquality" value="10" class="inputboxes"/>
+</span>
+
+<span>
+    Speed
+  <select id="speed">
+  </select>
+</span>
+<span>Resize
+  <input type="checkbox" id="resize">
+  </input>
+</span>
+
+<br><br>
+
 
 <div class="clearfix" id="result_div">
     <div style='clear:both'></div>

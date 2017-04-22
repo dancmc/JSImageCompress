@@ -3,7 +3,7 @@
 - Works by decreasing quality and/or image dimensions till desired maximum parameters met.
 - Demo at https://dancmc.io/projects/JSImageCompress
 ## Install
-Make a local copy of jsimagecompress.1.00.js / jsimagecompress.1.00-min.js or link to https://dancmc.io/static_jsimagecompress/js/jsimagecompress.1.00-min.js 
+Make a local copy of jsimagecompress.1.02.js / jsimagecompress.1.02-min.js or link to https://dancmc.io/static_jsimagecompress/js/jsimagecompress.1.02-min.js 
 
 ## Quick Start
 Call either imagesToResizedDataUrls or imagesToResizedBlobs

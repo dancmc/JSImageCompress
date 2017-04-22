@@ -5,6 +5,16 @@ body {
     font-size: 100%;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputboxes{
+    width: 80px;
+}
+
 #result_div div {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -36,7 +46,7 @@ body {
 @media only screen and (max-resolution: 192dpi) and (min-width: 768px){
     #result_div div img {
         float: left;
-        width: 25%;
+        width: 40%;
         vertical-align: middle;
         margin-right: 40px;
     }
