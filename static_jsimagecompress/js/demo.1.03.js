@@ -73,7 +73,7 @@ function compressAll() {
         "resize" : resize,
         "adaptive" : false,
         "log" : true,
-        "units" : "mb"
+        "units" : "kb"
     }, function (resultArray) {
 
 
