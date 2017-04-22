@@ -1,7 +1,7 @@
 # JS Image Compress
 - Configurable client side image compression - saves bandwidth and time on uploads.   
 - Works by decreasing quality and/or image dimensions till desired maximum parameters met.
-
+- Demo at https://dancmc.io/projects/JSImageCompress
 ## Install
 Make a local copy of jsimagecompress.1.00.js / jsimagecompress.1.00-min.js or link to https://dancmc.io/static_jsimagecompress/js/jsimagecompress.1.00-min.js 
 
